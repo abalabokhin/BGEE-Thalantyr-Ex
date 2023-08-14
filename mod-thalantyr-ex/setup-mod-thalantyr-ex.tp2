@@ -5,7 +5,7 @@ BACKUP ~mod-thalantyr-ex/backup~ // %MOD_FOLDER% will be a literal (because it's
 AUTHOR ~Bardez; support at: https://github.com/BardezAnAvatar/BGEE-Thalantyr-Ex/issues~
 
 /* WeiDU versions newer than v203 allow tp2 level version listing in the .log for troubleshooting  */
-VERSION ~v0.0.1~
+VERSION ~v0.0.2~
 
 //TP2 flags
 MODDER // Enable all error messages; nothing suppressed. comment this out for release version
@@ -40,8 +40,9 @@ OUTER_SET ThalantyrCraftingState = STATE_WHICH_SAYS @9001 FROM ~THALAN~
 PRINT @3 //found state
 PRINT ~DEBUG: var `MOD_FOLDER`: %MOD_FOLDER%~
 
-//copy over Shandalar's Cloak
-INCLUDE ~%MOD_FOLDER%/shandalar-cloak/shandalar-cloak.tph~
+//copy over items
+INCLUDE ~%MOD_FOLDER%/shandalar-cloak/shandalar-cloak.tph~  // Shandalar's Cloak
+INCLUDE ~%MOD_FOLDER%/varscona3/varscona3.tph~  // Varscona +3
 
 //Update Thalantyr's dialog
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/THALAN.d~

@@ -1,41 +1,39 @@
-COPY ~%MOD_FOLDER%/shandalar-cloak/BZCLK1I.BAM~ ~override/BZCLK1I.BAM~
-COPY_EXISTING ~CLCK02.ITM~ ~override/BZCLK1.ITM~ //cloak of protection +2 -> Shandalar's Cloak
+COPY ~%MOD_FOLDER%/varscona3/BZS1H1I.BAM~ ~override/BZS1H1I.BAM~
+COPY ~%MOD_FOLDER%/varscona3/BZS1H1.SPL~ ~override/BZS1H1.SPL~
+COPY_EXISTING ~SW1H06.ITM~ ~override/BZS1H1.ITM~ //Varscona +2 ->Varscona +3
     //Patches
-        SAY NAME2 @201
-        SAY IDENTIFIED_DESC @202
-        WRITE_ASCII_TERMINATE 0x3A "BZCLK1I"    // Inventory icon
-        LPF ~ADD_ITEM_EQEFFECT~
+        SAY NAME2 @101
+        SAY IDENTIFIED_DESC @102
+        WRITE_ASCII_TERMINATE 0x3A "BZS1H1I"    // Icon
+        WRITE_LONG 0x34 9515                    // Price
+        WRITE_LONG 0x60 3                       // Enchantment
+        LPF ~ALTER_ITEM_HEADER~
             INT_VAR
-                opcode = 29             // Type: Electrical Resistance Bonus
-                target = 1              // Self
-                timing = 2              // Timing Mode: Instant/While Equipped
-                parameter1 = 50         // value of resistance bonus
-                parameter2 = 0          // Modifier Type: Increment
-                power = 0
-                resist_dispel = 0       // Natural/Nonmagical
-                duration = 0
-                probability1 = 100
-                probability2 = 0
-                dicenumber = 0
-                dicesize = 0
-                savingthrow = 0
-                savebonus = 0
-                special = 0
-                insert_point = "-1"     // add to end
+                header = 1
+                thac0_bonus = 3
+                damage_bonus = 3
             STR_VAR
-                resource = ~~           // unused for opcode
+                icon = ~BZS1H1I~         //icon to display for melee
         END
-        LPF ~ADD_ITEM_EQEFFECT~
+        LPF ~ALTER_ITEM_EFFECT~
             INT_VAR
-                opcode = 142            // Type: Display Portrait Icon
-                target = 1              // Self
-                timing = 2              // Timing Mode: Instant/While Equipped
-                parameter1 = 0          // unused 
-                parameter2 = 27         // Icon: Protection from Electricity
-                power = 0
-                resist_dispel = 0       // Natural/Nonmagical
+                check_headers = 1
+                match_opcode = 12
+                dicenumber = 1
+                dicesize = 4
+                parameter1 = 1
+        END
+        LPF ~ADD_ITEM_EFFECT~           // slight clone of Larloch's Minor Drain
+            INT_VAR
+                opcode = 146            // Type: Cast Spell
+                target = 2              // Preset Target
+                power = 1
+                parameter1 = 1          // Caster Level
+                parameter2 = 1          // Casting Mode: Instantly
+                timing = 1              // Timing Mode: Instant/Permanent until Death
+                resist_dispel = 2       // No dispel/bypass resistance
                 duration = 0
-                probability1 = 100
+                probability1 = 5
                 probability2 = 0
                 dicenumber = 0
                 dicesize = 0
@@ -43,15 +41,16 @@ COPY_EXISTING ~CLCK02.ITM~ ~override/BZCLK1.ITM~ //cloak of protection +2 -> Sha
                 savebonus = 0
                 special = 0
                 insert_point = "-1"     // add to end
+                type = 1                // Type of header: Melee
             STR_VAR
-                resource = ~~           // unused for opcode
+                resource = ~BZS1H1~     // Which spell
         END
         LPF ~ADD_ITEM_EQEFFECT~
             INT_VAR
                 opcode = 30             // Type: Fire Resistance Bonus
                 target = 1              // Self
                 timing = 2              // Timing Mode: Instant/While Equipped
-                parameter1 = 25         // value of resistance bonus
+                parameter1 = 20         // value of resistance bonus
                 parameter2 = 0          // Modifier Type: Increment
                 power = 0
                 resist_dispel = 0       // Natural/Nonmagical
