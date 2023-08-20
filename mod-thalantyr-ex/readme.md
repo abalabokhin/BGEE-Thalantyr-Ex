@@ -15,7 +15,7 @@ I am using the `BZ` prefix for my items, as I have not seen it used or reference
 | ---------------------------------- | ------------ | ------- |
 | Shandalar's Cloak                  | ✔️ | 0.0.1 |
 | Varscona +3                        | ✔️ | 0.0.2 |
-| Koveras' Ring                      | ❌ | n/a |
+| Koveras' Ring                      | ✔️ | 0.0.3 |
 | Amulet of Protection +2            | ❌ | n/a |
 | Cloak of Protection +2             | ❌ | n/a |
 | Golden Axe +2                      | ❌ | n/a |
@@ -51,53 +51,58 @@ Upgrades the +2 longsword to +3; requires 1 emerald, 1 Cone of Cold scroll, 1 Va
 
 
 ### Koveras' Ring of Protection
-Ever since I "authored" the BGT mod, I felt this pull towards Koveras' ring of protection. It felt like an item that should have a story to itself, not just a basic clone of a +1 Ring of Protection. It felt like an item that you should be able to keep as a trophy, a momento or other and I always felt it was bogus that this never had anything done with it, but the _golden pantaloons_ were. After checking Github for this item in the BGT repo (not there), and my HDDs from 20-ish years ago, I wanted to put it back in.
+Ever since I "authored" the BGT mod, I felt this pull towards Koveras' ring of protection. It felt like an item that should have a story to itself, not just a basic clone of a +1 Ring of Protection. It felt like an item that you should be able to keep as a trophy, a momento or other and I always felt it was bogus that this never had anything done with it, but the _golden pantaloons_ did have a C-plot. After checking Github for this item in the BGT repo (not there), and my HDDs from 20-ish years ago (still there), I wanted to put it back in.
 
-This component has two sub-components; both will replace the Ring of Princes flavor text with a description matching in-game events. One will 
-have Koveras offer you a cursed ring, the other will leave the interaction as-is. Both paths will have an upgrade to the +2 ring of protection.
+This component has two sub-components; both will replace the Ring of Princes flavor text with a description matching in-game events. 
+One will have Koveras offer you a cursed ring, the other will leave the interaction as-is. Both paths will have an upgrade to the +2 ring of protection.
+
+#### +1 Ring
+Both sub-components will update the flavor text to deviate from ring of the prices to reflect its history in-game.
 
 ##### Statistics
-The +1 ring is updated to also grant +5 hp.
-
-The +2 ring grants +2 AC and +2 to saving throws as well as +5 hp and immunity to instant death effects.
-
-##### Creation
-The +2 ring requires 4x Horn Coral Gem; 3x scroll of raise dead; 5,000 gp. Should be 4x Death ward scroll, but doesn't exist in BG1.
-
+The +1 ring is updated to also grant +5 hp and 5% magic resistance.
 
 #### Component: Koveras' Cursed Ring
-Fairly simple: turn the ring Koveras gives you into a cursed ring. It makes sense from a story and RP perspective. If you then un-curse it, it becomes the regular ring of protection.
+Fairly simple: turn the ring Koveras gives you into a cursed ring. It makes sense from a story and RP perspective. If you then un-curse it, it becomes the ring of protection +1 described above. This component mentions on the +1 ring that Thalantyr un-cursed the item.
 
 ##### Restoration
-Requires three scrolls of Remove Curse; 2 garnets; and 3,000 gold
-
+Requires three scrolls of Remove Curse; 2 potions of fortitute; 3 garnets; and 3,000 gold
 
 #### Component: No Cursed Ring
-Also fairly simple: the ring that Koveras gives you is not cursed, and can be upgraded straight to a +2 version, with its own flavor text. This component will update the flavor text to deviate from ring of the prices to reflect its history in-game.
+Also fairly simple: the ring that Koveras gives you is not cursed, and can be upgraded straight to a +2 version, with its own flavor text.
+
+#### +2 Ring
+Regardless of how you get the +1 ring, it can be boosted to +2.
+
+##### Statistics
+The +2 ring grants +2 AC and +2 to saving throws as well as +5 hp, 10% Magic Resistance, and immunity to instant death effects.
+
+##### Creation
+The +2 ring requires 1x pearl; 1 scroll of Protection from magic, 3x scroll of raise dead; 5,000 gp. Should be 4x Death ward scroll, but doesn't exist in BG1.
 
 #### Versions
 | Name                                 | Effects                                                                          |
 | ------------------------------------ | -------------------------------------------------------------------------------- |
-| Gorion's Gift                        | Saves -3<br>AC -3<br>Thac0 -3                                                    |
-| Ring of Protection +1: Koveras' Gift | Saves +1<br>AC +1<br>HP +5                                                       |
-| Ring of Protection +2: Koveras' Gift | Saves +2<br>AC +2<br>HP +5<br>Immunity to instant death                          |
-| Ring of Protection +3: Koveras' Gift | Saves +3<br>AC +3<br>HP +10<br>Immunity to instant death<br>Immunity to backstab |
-| Ring of Protection +4: Koveras' Gift | Saves +4<br>AC +4<br>HP +10<br>Immunity to instant death<br>Immunity to backstab<br>Immunity to level drain |
-| Ring of Protection +5: Koveras' Gift | Saves +5<br>AC +5<br>HP +20<br>Immunity to instant death<br>Immunity to backstab<br>Immunity to level drain<br>Immunity to poison |
+| Gorion's Gift                        | Saves -3<br>AC -3<br>Thac0 -3 |
+| Ring of Protection +1: Koveras' Gift | Saves +1<br>AC +1<br>HP +5<br>+5% Magic Resistance |
+| Ring of Protection +2: Koveras' Gift | Saves +2<br>AC +2<br>HP +5<br>+10% Magic Resistance<br>Immunity to instant death |
+| Ring of Protection +3: Koveras' Gift | Saves +3<br>AC +3<br>HP +10<br>+15% Magic Resistance<br>Immunity to instant death<br>Immunity to backstab |
+| Ring of Protection +4: Koveras' Gift | Saves +4<br>AC +4<br>HP +15<br>+20% Magic Resistance<br>Immunity to instant death<br>Immunity to backstab<br>Immunity to level drain |
+| Ring of Protection +5: Koveras' Gift | Saves +5<br>AC +5<br>HP +30<br>+33% Magic Resistance<br>Immunity to instant death<br>Immunity to backstab<br>Immunity to level drain<br>Immunity to poison |
 
 
 ### Amulet of Protection +2
 Similar to the merging of two rings of protection, this will take two amulets of protection and merge them into a +2 amulet.
 
 ##### Creation
-The amulet will require two amulets of protection +1 (or an amulet and a ring of protection); two moonbar gems; a diamond; plus 5,000 gold.
+The amulet will require two amulets of protection +1 (or an amulet and a ring of protection; or an amulent and a cloak of protection); two moonbar gems; a diamond; plus 5,000 gold.
 
 
 ### Cloak of Protection +2
 Similar to the merging of two rings of protection, this will take two cloaks of protection and merge them into a +2 cloak.
 
 ##### Creation
-The amulet will require two cloaks of protection +1 (or a cloak and a ring of protection); 4 iol gems; a black opal; plus 5,000 gold.
+The amulet will require two cloaks of protection +1 (or a cloak and a ring of protection; or a cloack and an amulet of protection); 4 iol gems; a black opal; plus 5,000 gold.
 
 
 ### Golden Axe +2
@@ -176,6 +181,10 @@ The upgrade will require the Longsword +1: Harrower; six fire agate gem; plus 6,
 
 ### Scroll of Death Ward
 This would make way more sense for the Koveras Ring of Protection, so add it in at a later date. Add to temple stores, etc.
+
+
+### Pickpocket Golden Axe and Hammer of Dawn
+Give a less murder-y way to receive these unique magical items.
 
 
 ### SoD Parallel Mod Plans
