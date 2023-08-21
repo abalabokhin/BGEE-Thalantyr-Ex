@@ -16,8 +16,8 @@ I am using the `BZ` prefix for my items, as I have not seen it used or reference
 | Shandalar's Cloak                  | ✔️ | 0.0.1 |
 | Varscona +3                        | ✔️ | 0.0.2 |
 | Koveras' Ring                      | ✔️ | 0.0.3 |
-| Amulet of Protection +2            | ❌ | n/a |
-| Cloak of Protection +2             | ❌ | n/a |
+| Amulet of Protection +2            | ✔️ | 0.0.5 |
+| Cloak of Protection +2             | ✔️ | 0.0.5 |
 | Golden Axe +2                      | ❌ | n/a |
 | Axe +1 Wizard Slayer               | ❌ | n/a |
 | Axe +2 Wizard Slayer               | ❌ | n/a |
@@ -95,14 +95,14 @@ The +2 ring requires 1x pearl; 1 scroll of Protection from magic, 3x scroll of r
 Similar to the merging of two rings of protection, this will take two amulets of protection and merge them into a +2 amulet.
 
 ##### Creation
-The amulet will require two amulets of protection +1 (or an amulet and a ring of protection; or an amulent and a cloak of protection); two moonbar gems; a diamond; plus 5,000 gold.
+The amulet will require two amulets of protection +1 (or an amulet and a ring of protection; or an amulet and a cloak of protection); four moonbar gems; plus 5,000 gold.
 
 
 ### Cloak of Protection +2
 Similar to the merging of two rings of protection, this will take two cloaks of protection and merge them into a +2 cloak.
 
 ##### Creation
-The amulet will require two cloaks of protection +1 (or a cloak and a ring of protection; or a cloack and an amulet of protection); 4 iol gems; a black opal; plus 5,000 gold.
+The amulet will require two cloaks of protection +1 (or a cloak and a ring of protection; or a cloak and an amulet of protection); 4 iol gems; a black opal; plus 5,000 gold.
 
 
 ### Golden Axe +2
