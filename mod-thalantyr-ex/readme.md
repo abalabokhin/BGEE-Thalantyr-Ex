@@ -18,10 +18,9 @@ I am using the `BZ` prefix for my items, as I have not seen it used or reference
 | Koveras' Ring                      | ✔️ | 0.0.3 |
 | Amulet of Protection +2            | ✔️ | 0.0.5 |
 | Cloak of Protection +2             | ✔️ | 0.0.5 |
-| Golden Axe +2                      | ❌ | n/a |
-| Axe +1 Wizard Slayer               | ❌ | n/a |
-| Axe +2 Wizard Slayer               | ❌ | n/a |
-| Axe +2 Beruel's Retort             | ❌ | n/a |
+| Golden Axe +2                      | ✔️ | 0.0.6 |
+| Axe +1 Wizard Slayer               | ✔️ | 0.0.6 |
+| Axe +2 Wizard Slayer               | ✔️ | 0.0.6 |
 | Mace +2: The Stupifier             | ❌ | n/a |
 | Hammer +2: The Hammer of Dawn      | ❌ | n/a |
 | Longsword +2: Harrower             | ❌ | n/a |
@@ -107,9 +106,10 @@ The amulet will require two cloaks of protection +1 (or a cloak and a ring of pr
 
 ### Golden Axe +2
 If you decide to kill Fenten for whatever reason, you get a nice +1 axe. It'd be nicer as a +2.
++5% more chance of casting Dispel Magic, and +2 more vs elves, half-elves, and drow.
 
 ##### Creation
-The amulet will require the golden axe +1; a diamond; plus 6,000 gold.
+The amulet will require the golden axe +1; a diamond; a scroll of Dispel Magic; plus 3,000 gold.
 
 
 ### Axe +1 Wizard Slayer
@@ -121,19 +121,24 @@ The upgrade will require the Wizard Slayer axe; a pearl; plus 3,000 gold.
 
 ### Axe +2 Wizard Slayer
 Found in Durlag's Tower, this axe would be further improvable.
++2 basic stats, +3 vs mages (mages, sorcerers, and elminster).
 
 ##### Creation
-The upgrade will require the Wizard Slayer +1 axe; a diamond; plus 6,000 gold.
+The upgrade will require the Wizard Slayer +1 axe; a water opal; plus 6,000 gold.
+
+##### Notes/Plans
+Future versions get more: +3 vs bards, +4 vs paladins/rangers, +5 vs all spellcasters
 
 
-### Axe +2 Beruel's Retort
-Improve the axe from the Thunderhammer Smithy
+### ~~Axe +2 Beruel's Retort~~
+~~Improve the axe from the Thunderhammer Smithy~~
 
-##### Statistics
-Retains properties from +1 version, incremented to a +2 weapon. Gains +2 more vs orcs, goblins, and giants.
+##### ~~Statistics~~
+~~Retains properties from +1 version, incremented to a +2 weapon. Gains +2 more vs orcs, goblins, and giants.~~
 
-##### Creation
-The upgrade will require the Beruel's Retort +1 axe; three Chrysoberyl Gem; plus 6,000 gold.
+##### ~~Creation~~
+~~The upgrade will require the Beruel's Retort +1 axe; three Chrysoberyl Gem; plus 6,000 gold.~~
+NOTE: I was running a mod that made this returning, so I made bad plans.
 
 
 ### Mace +2: The Stupifier

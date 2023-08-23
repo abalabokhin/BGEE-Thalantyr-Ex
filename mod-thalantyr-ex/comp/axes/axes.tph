@@ -1,0 +1,433 @@
+COPY ~%MOD_FOLDER%/comp/axes/BZAX19BI.BAM~ ~override/BZAX19BI.BAM~  //+2 Golden Axe Inventory BAM
+COPY ~%MOD_FOLDER%/comp/axes/BZH2ELF.EFF~ ~override/BZH2ELF.EFF~    //+2 to hit elves
+COPY ~%MOD_FOLDER%/comp/axes/BZH2HELF.EFF~ ~override/BZH2HELF.EFF~  //+2 to hit half-elves
+COPY ~%MOD_FOLDER%/comp/axes/BZ2DAM.EFF~ ~override/BZ2DAM.EFF~      //+2 damage
+
+COPY_EXISTING ~AX1H19.ITM~ ~override/BZAX19B.ITM~ //Golden Axe +1 -> +2
+    //Patches
+        SAY NAME2 @500
+        SAY IDENTIFIED_DESC @501
+        WRITE_ASCII_TERMINATE 0x3A "BZAX19BI"   // Icon
+        WRITE_LONG 0x34 4000                    // Price
+        WRITE_LONG 0x60 2                       // Enchantment
+        LPF ~ALTER_ITEM_HEADER~
+            INT_VAR
+                header = 1
+                thac0_bonus = 2
+                damage_bonus = 2
+            STR_VAR
+                icon = ~BZAX19BI~       //icon to display for melee
+        END
+        //remove weird 10% effect nonsense
+        LPF ~DELETE_ITEM_EFFECT~
+            INT_VAR
+                opcode_to_delete = 240  //remove portrait icon
+        END
+        LPF ~DELETE_ITEM_EFFECT~
+            INT_VAR
+                opcode_to_delete = 81   //cure deafness
+        END
+        LPF ~DELETE_ITEM_EFFECT~
+            INT_VAR
+                opcode_to_delete = 139  //display string
+        END
+        LPF ~DELETE_ITEM_EFFECT~
+            INT_VAR
+                opcode_to_delete = 112  //remove item
+        END
+        LPF ~DELETE_ITEM_EFFECT~
+            INT_VAR
+                opcode_to_delete = 58   //dispel effects
+        END
+        LPF ~DELETE_ITEM_EFFECT~
+            INT_VAR
+                opcode_to_delete = 215  //visual effect
+        END
+        LPF ~DELETE_ITEM_EFFECT~
+            INT_VAR
+                opcode_to_delete = 77   //cure feeblemindness
+        END
+        LPF ~DELETE_ITEM_EFFECT~
+            INT_VAR
+                opcode_to_delete = 177  //use EFF file
+        END
+        LPF ~ADD_ITEM_EFFECT~           // 15% CAST of Dispel Magic
+            INT_VAR
+                opcode = 146            // Type: Cast Spell
+                target = 2              // Preset Target
+                power = 1
+                parameter1 = 30         // Caster Level
+                parameter2 = 1          // Casting Mode: Instantly
+                timing = 1              // Timing Mode: Instant/Permanent until Death
+                resist_dispel = 2       // No dispel/bypass resistance
+                duration = 0
+                probability1 = 15
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+                type = 1                // Type of header: Melee
+            STR_VAR
+                resource = ~SPWI326~    // Which spell
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // thac0 vs elves
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 1              // self
+                power = 1
+                parameter1 = 0          // IDS Value: Anyone
+                parameter2 = 2          // Which IDS: EA.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~BZH2ELF~    // Which EFF
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // thac0 vs half-elves
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 1              // self
+                power = 1
+                parameter1 = 0          // IDS Value: Anyone
+                parameter2 = 2          // Which IDS: EA.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~BZH2HELF~   // Which EFF
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // enchantment vs elves
+            INT_VAR
+                opcode = 344            // Type: Enchantment vs. creature type
+                target = 1              // self
+                power = 0
+                parameter1 = 2          // IDS Value: ELF
+                parameter2 = 4          // Which IDS: RACE.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 4             // enchantment
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~~           // unused
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // enchantment vs half-elves
+            INT_VAR
+                opcode = 344            // Type: Enchantment vs. creature type
+                target = 1              // self
+                power = 0
+                parameter1 = 3          // IDS Value: HALF-ELF
+                parameter2 = 4          // Which IDS: RACE.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 4             // enchantment
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~~           // unused
+        END
+        LPF ~ADD_ITEM_EFFECT~           // Damage vs elves
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 2              // preset target
+                power = 0
+                parameter1 = 2          // IDS Value: ELF
+                parameter2 = 4          // Which IDS: RACE.IDS
+                timing = 1              // Timing Mode: Instant/Permanent until death
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+                type = 1                // Type of header: Melee
+            STR_VAR
+                resource = ~BZ2DAM~     // Which EFF
+        END
+        LPF ~ADD_ITEM_EFFECT~           // Damage vs half-elves
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 2              // preset target
+                power = 0
+                parameter1 = 3          // IDS Value: HALF-ELF
+                parameter2 = 4          // Which IDS: RACE.IDS
+                timing = 1              // Timing Mode: Instant/Permanent until death
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+                type = 1                // Type of header: Melee
+            STR_VAR
+                resource = ~BZ2DAM~     // Which EFF
+        END
+        
+COPY ~%MOD_FOLDER%/comp/axes/BZAX07AI.BAM~ ~override/BZAX07AI.BAM~  //Wizard Slayer +1 Inventory BAM
+COPY_EXISTING ~AX1H07.ITM~ ~override/BZAX07A.ITM~ //Wizard Slayer -> +1
+    //Patches
+        SAY NAME2 @502
+        SAY IDENTIFIED_DESC @503
+        WRITE_ASCII_TERMINATE 0x3A "BZAX07AI"   // Icon
+        WRITE_LONG 0x34 2300                    // Price
+        WRITE_LONG 0x60 1                       // Enchantment
+        LPF ~ALTER_ITEM_HEADER~
+            INT_VAR
+                header = 1
+                thac0_bonus = 1
+                damage_bonus = 1
+            STR_VAR
+                icon = ~BZAX07AI~       //icon to display for melee
+        END
+        
+COPY ~%MOD_FOLDER%/comp/axes/BZAX07BI.BAM~ ~override/BZAX07BI.BAM~  //Wizard Slayer +2 Inventory BAM
+COPY ~%MOD_FOLDER%/comp/axes/BZH1MAGE.EFF~ ~override/BZH1MAGE.EFF~  //+1 to hit mages
+COPY ~%MOD_FOLDER%/comp/axes/BZH1OGMA.EFF~ ~override/BZH1OGMA.EFF~  //+1 to hit ogre mages
+COPY ~%MOD_FOLDER%/comp/axes/BZH1EMST.EFF~ ~override/BZH1EMST.EFF~  //+1 to hit Elminster class
+COPY ~%MOD_FOLDER%/comp/axes/BZ1DAMS.EFF~ ~override/BZ1DAMS.EFF~    //+1 slashing damage
+COPY_EXISTING ~BZAX07A.ITM~ ~override/BZAX07B.ITM~ //Wizard Slayer +1 -> +2
+    //Patches
+        SAY NAME2 @504
+        SAY IDENTIFIED_DESC @505
+        WRITE_ASCII_TERMINATE 0x3A "BZAX07BI"   // Icon
+        WRITE_LONG 0x34 6400                    // Price
+        WRITE_LONG 0x60 2                       // Enchantment
+        LPF ~ALTER_ITEM_HEADER~
+            INT_VAR
+                header = 1
+                thac0_bonus = 2
+                damage_bonus = 2
+            STR_VAR
+                icon = ~BZAX07BI~       //icon to display for melee
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // thac0 vs MAGE_ALL
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 1              // self
+                power = 1
+                parameter1 = 0          // IDS Value: Anyone
+                parameter2 = 2          // Which IDS: EA.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~BZH1MAGE~   // Which EFF
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // thac0 vs OGRE_MAGE
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 1              // self
+                power = 1
+                parameter1 = 0          // IDS Value: Anyone
+                parameter2 = 2          // Which IDS: EA.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~BZH1OGMA~   // Which EFF
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // thac0 vs Elminster, lol
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 1              // self
+                power = 1
+                parameter1 = 0          // IDS Value: Anyone
+                parameter2 = 2          // Which IDS: EA.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~BZH1EMST~   // Which EFF
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // enchantment vs mages
+            INT_VAR
+                opcode = 344            // Type: Enchantment vs. creature type
+                target = 1              // self
+                power = 0
+                parameter1 = 202        // IDS Value: MAGE_ALL
+                parameter2 = 5          // Which IDS: CLASS.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 3             // enchantment
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~~           // unused
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // enchantment vs ogre mages
+            INT_VAR
+                opcode = 344            // Type: Enchantment vs. creature type
+                target = 1              // self
+                power = 0
+                parameter1 = 126        // IDS Value: OGRE_MAGE
+                parameter2 = 5          // Which IDS: CLASS.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 3             // enchantment
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~~           // unused
+        END
+        LPF ~ADD_ITEM_EQEFFECT~         // enchantment vs Elminster
+            INT_VAR
+                opcode = 344            // Type: Enchantment vs. creature type
+                target = 1              // self
+                power = 0
+                parameter1 = 114        // IDS Value: Elminster
+                parameter2 = 5          // Which IDS: CLASS.IDS
+                timing = 2              // Timing Mode: Instant/While equipped
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 3             // enchantment
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~~           // unused
+        END
+        LPF ~ADD_ITEM_EFFECT~           // Damage vs mages
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 2              // preset target
+                power = 0
+                parameter1 = 202        // IDS Value: MAGE_ALL
+                parameter2 = 5          // Which IDS: CLASS.IDS
+                timing = 1              // Timing Mode: Instant/Permanent until death
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+                type = 1                // Type of header: Melee
+            STR_VAR
+                resource = ~BZ1DAMS~    // Which EFF
+        END
+        LPF ~ADD_ITEM_EFFECT~           // Damage vs ogre mages
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 2              // preset target
+                power = 0
+                parameter1 = 126        // IDS Value: OGRE_MAGE
+                parameter2 = 5          // Which IDS: CLASS.IDS
+                timing = 1              // Timing Mode: Instant/Permanent until death
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+                type = 1                // Type of header: Melee
+            STR_VAR
+                resource = ~BZ1DAMS~    // Which EFF
+        END
+        LPF ~ADD_ITEM_EFFECT~           // Damage vs Elminster
+            INT_VAR
+                opcode = 177            // Type: Use EFF File
+                target = 2              // preset target
+                power = 0
+                parameter1 = 114        // IDS Value: ELMINSTER
+                parameter2 = 5          // Which IDS: CLASS.IDS
+                timing = 1              // Timing Mode: Instant/Permanent until death
+                resist_dispel = 0       // Natural/nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+                type = 1                // Type of header: Melee
+            STR_VAR
+                resource = ~BZ1DAMS~    // Which EFF
+        END

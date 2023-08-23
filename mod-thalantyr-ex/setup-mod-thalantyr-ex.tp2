@@ -5,7 +5,7 @@ BACKUP ~mod-thalantyr-ex/backup~ // %MOD_FOLDER% will be a literal (because it's
 AUTHOR ~Bardez; support at: https://github.com/BardezAnAvatar/BGEE-Thalantyr-Ex/issues~
 
 /* WeiDU versions newer than v203 allow tp2 level version listing in the .log for troubleshooting  */
-VERSION ~v0.0.5~
+VERSION ~v0.0.6~
 
 //TP2 flags
 MODDER // Enable all error messages; nothing suppressed. comment this out for release version
@@ -26,6 +26,7 @@ LANGUAGE
         ~./mod-thalantyr-ex/tra/en_US/varscona3.tra~
         ~./mod-thalantyr-ex/tra/en_US/koveras.tra~
         ~./mod-thalantyr-ex/tra/en_US/protection.tra~
+        ~./mod-thalantyr-ex/tra/en_US/axes.tra~
         ~./mod-thalantyr-ex/tra/en_US/thalan.tra~
 
 
@@ -49,6 +50,7 @@ INCLUDE ~%MOD_FOLDER%/comp/shandalar-cloak/shandalar-cloak.tph~  // Shandalar's 
 INCLUDE ~%MOD_FOLDER%/comp/varscona3/varscona3.tph~  // Varscona +3
 INCLUDE ~%MOD_FOLDER%/comp/koveras/koveras.tph~  // Koveras' Ring of Protection versions
 INCLUDE ~%MOD_FOLDER%/comp/protection/protection.tph~  // Protection amulet, etc.
+INCLUDE ~%MOD_FOLDER%/comp/axes/axes.tph~  // axes
 
 //Update Thalantyr's dialog
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/THALAN.d~
