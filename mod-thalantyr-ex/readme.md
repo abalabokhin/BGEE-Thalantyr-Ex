@@ -21,10 +21,15 @@ I am using the `BZ` prefix for my items, as I have not seen it used or reference
 | Golden Axe +2                      | ✔️ | 0.0.6 |
 | Axe +1 Wizard Slayer               | ✔️ | 0.0.6 |
 | Axe +2 Wizard Slayer               | ✔️ | 0.0.6 |
-| Mace +2: The Stupifier             | ❌ | n/a |
-| Hammer +2: The Hammer of Dawn      | ❌ | n/a |
-| Longsword +2: Harrower             | ❌ | n/a |
-| Light Crossbow +2: The Army Scythe | ❌ | n/a |
+| Mace +2: The Stupifier             | ✔️ | 0.0.7 |
+| Hammer +2: The Hammer of Dawn      | ✔️ | 0.0.7 |
+| Long Sword +2: Harrower            | ✔️ | 0.0.7 |
+| Light Crossbow +2: The Army Scythe | ✔️ | 0.0.7 |
+| Ankheg Plate + 1                   | ❌ | n/a |
+| Werebane +2                        | ❌ | n/a |
+| Buckley's Buckler +2               | ❌ | n/a |
+| Refactor items into submodule      | ❌ | n/a |
+
 
 ## Items
 ### Shandalar's Cloak
@@ -142,13 +147,13 @@ NOTE: I was running a mod that made this returning, so I made bad plans.
 
 
 ### Mace +2: The Stupifier
-Improve the mace to +2
+Improve the mace to +2, increase the % chance to 15%
 
 ##### Statistics
 Retains properties from +1 version, incremented to a +2 weapon.
 
 ##### Creation
-The upgrade will require the Mace +1: The Stupifier mace; five bloodstone Gem; plus 6,000 gold.
+The upgrade will require the Mace +1: The Stupifier mace; two aquamarine; plus 4,000 gold.
 
 
 ### Hammer +2: The Hammer of Dawn
@@ -158,7 +163,7 @@ Improve the hammer to +2
 Retains properties from +1 version, incremented to a +2 weapon.
 
 ##### Creation
-The upgrade will require the Hammer +1: The Hammer of Dawn; six andar Gem; plus 6,000 gold.
+The upgrade will require the Hammer +1: The Hammer of Dawn; six andar Gem; plus 4,000 gold.
 
 
 ### Longsword +2: Harrower
@@ -178,7 +183,7 @@ Improve the Scythe to +2
 Retains properties from +1 version, incremented to a +2 weapon.
 
 ##### Creation
-The upgrade will require the Longsword +1: Harrower; six fire agate gem; plus 6,000 gold.
+The upgrade will require the Light Crossbow +1: The Army Scythe; six fire agate gem; plus 8,000 gold.
 
 
 

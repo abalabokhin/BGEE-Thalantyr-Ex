@@ -267,7 +267,7 @@ DestroyItem("SCRL1E")
 GiveItemCreate("BZAX19B",Player1,1,1,1)
 CreateVisualEffect("spcrtwpn",[330.230])~
           EXIT
-    END
+  END
   IF ~~ THEN BEGIN bardez_thalantyr_axe_wizardlayer_1 // from: ThalantyrCraftingState
     SAY @1405 /* ~This... "axe" is crude, why would you want to enchant it?~ */
       = @1406 // ~Ah, I feel the enchantment now. Interesting, as if enchanted with mage blood [...] ~
@@ -289,7 +289,7 @@ DestroyItem("MISC36")
 GiveItemCreate("BZAX07A",Player1,1,1,1)
 CreateVisualEffect("spcrtwpn",[330.230])~
           EXIT
-    END
+  END
   IF ~~ THEN BEGIN bardez_thalantyr_axe_wizardlayer_2 // from: ThalantyrCraftingState
     SAY @1408 /* ~I suppose I could attune it against mages [...] ~ */
     IF ~~ THEN REPLY @9000 /* ~I don't need it right now. Maybe I have something else you could alter?~ */ 
@@ -310,7 +310,92 @@ DestroyItem("MISC39")
 GiveItemCreate("BZAX07B",Player1,1,1,1)
 CreateVisualEffect("spcrtwpn",[330.230])~
           EXIT
-    END
+  END
+  IF ~~ THEN BEGIN bardez_thalantyr_axe_stupefier_2 // from: ThalantyrCraftingState
+    SAY @1501 /* ~Indeed. I can increase its martial effectiveness with relative ease. [...] ~ */
+    IF ~~ THEN REPLY @9000 /* ~I don't need it right now. Maybe I have something else you could alter?~ */ 
+      GOTO %ThalantyrCraftingState%
+    IF 
+~PartyHasItem("BLUN41")
+NumItemsPartyGT("MISC33",1)
+PartyGoldGT(3999)~
+      THEN
+          REPLY @1403  /* ~Yes, please make it for me.~ */
+          DO
+~TakePartyGold(4000)
+DestroyGold(4000)
+TakePartyItemNum("MISC33",2)
+DestroyItem("MISC33")
+TakePartyItemNum("BLUN41",1)
+DestroyItem("BLUN41")
+GiveItemCreate("BZMA41B",Player1,1,1,1)
+CreateVisualEffect("spcrtwpn",[330.230])~
+          EXIT
+  END
+  IF ~~ THEN BEGIN bardez_thalantyr_hammer_dawn_2 // from: ThalantyrCraftingState
+    SAY @1601 /* ~I could increase its combat enchantment easily enough [...]~ */
+    IF ~~ THEN REPLY @9000 /* ~I don't need it right now. Maybe I have something else you could alter?~ */ 
+      GOTO %ThalantyrCraftingState%
+    IF 
+~PartyHasItem("HAMM13")
+NumItemsPartyGT("MISC22",5)
+PartyGoldGT(3999)~
+      THEN
+          REPLY @1403  /* ~Yes, please make it for me.~ */
+          DO
+~TakePartyGold(4000)
+DestroyGold(4000)
+TakePartyItemNum("MISC22",6)
+DestroyItem("MISC22")
+TakePartyItemNum("HAMM13",1)
+DestroyItem("HAMM13")
+GiveItemCreate("BZHM13B",Player1,1,1,1)
+CreateVisualEffect("spcrtwpn",[330.230])~
+          EXIT
+  END
+  IF ~~ THEN BEGIN bardez_thalantyr_harrower_2 // from: ThalantyrCraftingState
+    SAY @1702 /* ~Ah, these runes identify this sword "Harrower" [...]~ */
+      = @1703 /* I can enchant this sword further [...] */
+    IF ~~ THEN REPLY @9000 /* ~I don't need it right now. Maybe I have something else you could alter?~ */ 
+      GOTO %ThalantyrCraftingState%
+    IF 
+~PartyHasItem("SW1H79")
+NumItemsPartyGT("MISC17",5)
+PartyGoldGT(5999)~
+      THEN
+          REPLY @1403  /* ~Yes, please make it for me.~ */
+          DO
+~TakePartyGold(6000)
+DestroyGold(6000)
+TakePartyItemNum("MISC17",6)
+DestroyItem("MISC17")
+TakePartyItemNum("SW1H79",1)
+DestroyItem("SW1H79")
+GiveItemCreate("BZSW79B",Player1,1,1,1)
+CreateVisualEffect("spcrtwpn",[330.230])~
+          EXIT
+  END
+  IF ~~ THEN BEGIN bardez_thalantyr_crossbow_speed_2 // from: ThalantyrCraftingState
+    SAY @1801 /* Perhaps. Ah, yes, I believe I can. It will be costly [...] */
+    IF ~~ THEN REPLY @9000 /* ~I don't need it right now. Maybe I have something else you could alter?~ */ 
+      GOTO %ThalantyrCraftingState%
+    IF 
+~PartyHasItem("XBOW06")
+NumItemsPartyGT("MISC16",5)
+PartyGoldGT(7999)~
+      THEN
+          REPLY @1403  /* ~Yes, please make it for me.~ */
+          DO
+~TakePartyGold(8000)
+DestroyGold(8000)
+TakePartyItemNum("MISC16",6)
+DestroyItem("MISC16")
+TakePartyItemNum("XBOW06",1)
+DestroyItem("XBOW06")
+GiveItemCreate("BZXB06B",Player1,1,1,1)
+CreateVisualEffect("spcrtwpn",[330.230])~
+          EXIT
+  END
 END
 
 EXTEND_TOP ~THALAN~ 
@@ -342,8 +427,24 @@ EXTEND_TOP ~THALAN~
           GOTO bardez_thalantyr_axe_wizardlayer_1
     IF ~PartyHasItem("BZAX07A")~
       THEN 
-          REPLY @1407 /* ~I still have the Wizard Slayer axe~ */
+          REPLY @1407 /* ~I still have the Wizard Slayer axe [...]~ */
           GOTO bardez_thalantyr_axe_wizardlayer_2
+    IF ~PartyHasItem("BLUN41")~
+      THEN 
+          REPLY @1500 /* ~I have this +1 Mace, The Stupefier. [...]~ */
+          GOTO bardez_thalantyr_axe_stupefier_2
+    IF ~PartyHasItem("HAMM13")~
+      THEN 
+          REPLY @1600 /* ~I have the Hammer of Dawn +1. [...]~ */
+          GOTO bardez_thalantyr_hammer_dawn_2
+    IF ~PartyHasItem("SW1H79")~
+      THEN 
+          REPLY @1700 /* ~I have this longsword effective against undead [...]~ */
+          GOTO bardez_thalantyr_harrower_2
+    IF ~PartyHasItem("XBOW06")~
+      THEN 
+          REPLY @1800 /* ~I have this light crossbow, faster at slinging bolts than most [...]~ */
+          GOTO bardez_thalantyr_crossbow_speed_2
     IF ~PartyHasItem("BZRNG1")~
       THEN 
           REPLY @1200 /* ~I have this cursed ring given to me in Candlekeep. Can you remove the curse?~ */
