@@ -25,9 +25,12 @@ I am using the `BZ` prefix for my items, as I have not seen it used or reference
 | Hammer +2: The Hammer of Dawn      | ✔️ | 0.0.7 |
 | Long Sword +2: Harrower            | ✔️ | 0.0.7 |
 | Light Crossbow +2: The Army Scythe | ✔️ | 0.0.7 |
-| Ankheg Plate + 1                   | ❌ | n/a |
+| Ankheg Plate + 1                   | ✔️ | 0.0.8 |
+| Buckley's Buckler +2               | ✔️ | 0.0.8 |
+| Kiel's Helmet +1                   | ✔️ | 0.0.8 |
+| Kiel's Buckler +1                  | ✔️ | 0.0.8 |
 | Werebane +2                        | ❌ | n/a |
-| Buckley's Buckler +2               | ❌ | n/a |
+| Algernon's Cloak +2                | ❌ | n/a |
 | Refactor items into submodule      | ❌ | n/a |
 
 
@@ -184,6 +187,46 @@ Retains properties from +1 version, incremented to a +2 weapon.
 
 ##### Creation
 The upgrade will require the Light Crossbow +1: The Army Scythe; six fire agate gem; plus 8,000 gold.
+
+
+### Ankheg Plate +1
+Improve the armor to a +1 enchantment
+
+##### Statistics
+Pretty much the same as base, just one extra AC bonus
+
+##### Creation
+The upgrate will require one Angkheg plate, 2 diamonds, and 8,000 gold.
+
+
+### Kiel's Buckler +1
+Improve the buckler to a +1 enchantment
+
+##### Statistics
+Pretty much the same as base, just one extra AC bonus
+
+##### Creation
+The upgrate will require Kiel's Buckler, 4 moonbar gems, and 3,000 gold.
+
+
+### Kiel's Helmet +1
+Improve the helmet to a +1 enchantment for AC
+
+##### Statistics
+Pretty much the same as base, just one extra AC bonus
+
+##### Creation
+The upgrate will require Kiel's Helmet, Kiel's Helmet; two scrolls of Armor; two skydrop gems; and 4,000 gold
+
+
+### Buckley's Buckler +1
+Improve the buckler to a +1 enchantment
+
+##### Statistics
+Pretty much the same as base, just one extra AC bonus
+
+##### Creation
+The upgrate will require Buckley's Buckler; 6 jasper gems; and 2,000 gold.
 
 
 
