@@ -21,3 +21,4 @@
 | Kiel's Buckler +1                  | BZSH20A |
 | Buckley's Buckler +1               | BZSH33A |
 | Kiel's Helmet +1                   | BZHL14A |
+| Dagger +2: Werebane                | BZDG09B |

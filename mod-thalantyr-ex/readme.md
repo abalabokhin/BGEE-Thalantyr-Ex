@@ -29,7 +29,7 @@ I am using the `BZ` prefix for my items, as I have not seen it used or reference
 | Buckley's Buckler +2               | ✔️ | 0.0.8 |
 | Kiel's Helmet +1                   | ✔️ | 0.0.8 |
 | Kiel's Buckler +1                  | ✔️ | 0.0.8 |
-| Werebane +2                        | ❌ | n/a |
+| Werebane +2                        | ✔️ | 0.0.9 |
 | Algernon's Cloak +2                | ❌ | n/a |
 | Refactor items into submodule      | ❌ | n/a |
 
@@ -227,6 +227,16 @@ Pretty much the same as base, just one extra AC bonus
 
 ##### Creation
 The upgrate will require Buckley's Buckler; 6 jasper gems; and 2,000 gold.
+
+
+### Werebane +2
+Improve the dagger to something useful longer-term
+
+##### Statistics
+Improve the dagger to a +2 enchantment; make throwing/returning
+
+##### Creation
+The upgrate will require Werebane; 2 gold necklaces; 2 oils of speed; and 5,000 gold.
 
 
 
