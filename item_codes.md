@@ -1,3 +1,56 @@
+| Type | Prefix |
+| ---- | ------ |
+| Amulet  | BZAML___ |
+| Axe     | BZ1AX___ |
+| Cloak   | BZCLK___ |
+| Hammer  | BZHAM___ |
+| Helm    | BZHLM___ |
+| Mace    | BZMAC___ |
+| Flail   | BZFLA___ |
+| Club    | BZCLB___ |
+| Morning | BZMRN___ |
+| Blunt   | BZBLN___ |
+| SW1H    | BZ1SW___ |
+| SW2H    | BZ2SW___ |
+| Ring    | BZRNG___ |
+| XBOW    | BZXBW___ |
+| Plate   | BZPLM___ |
+| Leather | BZLEA___ |
+| Chain   | BZCHM___ |
+| Dagger  | BZDAG___ |
+| Shield  | BZSHL___ |
+| Arrow   | BZARO___ |
+| Bullet  | BZBUL___ |
+| Bolt    | BZBOL___ | **
+| Bag     | BZBAG___ |
+| Bracers | BZBRA___ |
+| Belt    | BZBEL___ | **
+| BOW     | BZBOW___ |
+| Dart    | BZDRT___ |
+| Halberd | BAHAL___ |
+| Misc    | BZMSC___ |
+| Potion  | BZPTN___ |
+| Staff   | BZSTF___ |
+| Quiver  | BZQIV___ |
+| Note    | BZNOT___ |
+| Scroll  | BZSCL___ |
+| Sling   | BZSNG___ |
+| Spear   | BZSPR___ | ** Priest spell
+| Wand    | BZWND___ |
+
+
+| Bonus  | Postfix |
+| ------ | ------- |
+| Cursed | _____!  |
+| +1     | _____A  |
+| +2     | _____B  |
+| +3     | _____C  |
+| +4     | _____D  |
+| +5     | _____E  |
+| +6     | _____F  |
+
+
+
 
 | Name                               | Code    |
 | ---------------------------------- | ------- |
