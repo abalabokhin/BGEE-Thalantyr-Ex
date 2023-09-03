@@ -280,7 +280,7 @@ EXTEND_TOP ~THALAN~
       THEN 
           REPLY @1404 /* ~I have this axe, mundane in combat except against spellcasters~ */
           GOTO bardez_thalantyr_axe_wizardlayer_1
-    IF ~PartyHasItem("BZAX07A")~
+    IF ~PartyHasItem("BZ1AX07A")~
       THEN 
           REPLY @1407 /* ~I still have the Wizard Slayer axe [...]~ */
           GOTO bardez_thalantyr_axe_wizardlayer_2
@@ -328,7 +328,7 @@ EXTEND_TOP ~THALAN~
       THEN 
           REPLY @1311 /* ~I have a nymph's cloak. Can you make it any more useful?~ */
           GOTO bardez_thalantyr_nymph_cloak_2
-    IF ~PartyHasItem("BZRNG1")~
+    IF ~PartyHasItem("BZRNG25!")~
       THEN 
           REPLY @1200 /* ~I have this cursed ring given to me in Candlekeep. Can you remove the curse?~ */
           GOTO bardez_thalantyr_koveras_uncurse

@@ -1,67 +1,118 @@
-COPY ~%MOD_FOLDER%/comp/protection/BZAML1BI.BAM~ ~override/BZAML1BI.BAM~
-
-//make amulet +2
-COPY_EXISTING ~AMUL14.ITM~ ~override/BZAML1B.ITM~ //Amulet of Protection +2
+/*****************************************
+*   Shandalar's Cloak of Protection +2   *
+*****************************************/
+COPY ~%MOD_FOLDER%/craftable-items/items/cloaks/BZCL22BI.BAM~ ~override/BZCL22BI.BAM~
+COPY_EXISTING ~CLCK02.ITM~ ~override/BZCL22B.ITM~ //cloak of protection +2 -> Shandalar's Cloak
     //Patches
-        SAY NAME2 @400
-        SAY IDENTIFIED_DESC @401
-        WRITE_LONG 0x34 9000                    // Price
-        WRITE_ASCII_TERMINATE 0x3A "BZAML1BI"   // Icon
-        WRITE_LONG 0x42 70                      // Lore to Identify
-        LPF ~ALTER_ITEM_EFFECT~
+        SAY NAME2 @20000
+        SAY IDENTIFIED_DESC @20001
+        WRITE_LONG 0x34 12000                   // Price
+        WRITE_ASCII_TERMINATE 0x3A "BZCL22BI"   // Inventory icon
+        WRITE_LONG 0x42 85                      // Lore to Identify
+        LPF ~ADD_ITEM_EQEFFECT~
             INT_VAR
-                check_globals = 1
-                match_opcode = 0                // AC Bonus
-                parameter1 = 2
+                opcode = 29             // Type: Electrical Resistance Bonus
+                target = 1              // Self
+                timing = 2              // Timing Mode: Instant/While Equipped
+                parameter1 = 50         // value of resistance bonus
+                parameter2 = 0          // Modifier Type: Increment
+                power = 0
+                resist_dispel = 0       // Natural/Nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~~           // unused for opcode
         END
-        LPF ~ALTER_ITEM_EFFECT~
+        LPF ~ADD_ITEM_EQEFFECT~
             INT_VAR
-                check_globals = 1
-                match_opcode = 33               // Save: Death
-                parameter1 = 2
+                opcode = 142            // Type: Display Portrait Icon
+                target = 1              // Self
+                timing = 2              // Timing Mode: Instant/While Equipped
+                parameter1 = 0          // unused 
+                parameter2 = 27         // Icon: Protection from Electricity
+                power = 0
+                resist_dispel = 0       // Natural/Nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~~           // unused for opcode
         END
-        LPF ~ALTER_ITEM_EFFECT~
+        LPF ~ADD_ITEM_EQEFFECT~
             INT_VAR
-                check_globals = 1
-                match_opcode = 34               // Save: Wands
-                parameter1 = 2
+                opcode = 30             // Type: Fire Resistance Bonus
+                target = 1              // Self
+                timing = 2              // Timing Mode: Instant/While Equipped
+                parameter1 = 25         // value of resistance bonus
+                parameter2 = 0          // Modifier Type: Increment
+                power = 0
+                resist_dispel = 0       // Natural/Nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~~           // unused for opcode
         END
-        LPF ~ALTER_ITEM_EFFECT~
+        LPF ~ADD_ITEM_EQEFFECT~
             INT_VAR
-                check_globals = 1
-                match_opcode = 35               // Save: Polymorph
-                parameter1 = 2
-        END
-        LPF ~ALTER_ITEM_EFFECT~
-            INT_VAR
-                check_globals = 1
-                match_opcode = 36               // Save: Breath
-                parameter1 = 2
-        END
-        LPF ~ALTER_ITEM_EFFECT~
-            INT_VAR
-                check_globals = 1
-                match_opcode = 37               // Save: Spell
-                parameter1 = 2
+                opcode = 142            // Type: Display Portrait Icon
+                target = 1              // Self
+                timing = 2              // Timing Mode: Instant/While Equipped
+                parameter1 = 0          // unused 
+                parameter2 = 16         // Icon: Protection from Fire
+                power = 0
+                resist_dispel = 0       // Natural/Nonmagical
+                duration = 0
+                probability1 = 100
+                probability2 = 0
+                dicenumber = 0
+                dicesize = 0
+                savingthrow = 0
+                savebonus = 0
+                special = 0
+                insert_point = "-1"     // add to end
+            STR_VAR
+                resource = ~~           // unused for opcode
         END
 
-//Algernon's Cloak +2
-COPY ~%MOD_FOLDER%/comp/protection/BZCLK8BI.BAM~ ~override/BZCLK8BI.BAM~
-COPY ~%MOD_FOLDER%/comp/protection/BZCL8B_C.BAM~ ~override/BZCL8B_C.BAM~
-COPY ~%MOD_FOLDER%/comp/protection/BZCL8B_F.BAM~ ~override/BZCL8B_F.BAM~
-COPY_EXISTING ~CLCK08.ITM~ ~override/BZCLK8B.ITM~
+/*************************************
+*   Nymph's Cloak of Protection +2   *
+*************************************/
+COPY ~%MOD_FOLDER%/craftable-items/items/cloaks/BZCL07BI.BAM~ ~override/BZCL07BI.BAM~
+COPY ~%MOD_FOLDER%/craftable-items/items/cloaks/BZCL7B_C.BAM~ ~override/BZCL7B_C.BAM~
+COPY ~%MOD_FOLDER%/craftable-items/items/cloaks/BZCL7B_F.BAM~ ~override/BZCL7B_F.BAM~
+COPY_EXISTING ~CLCK08.ITM~ ~override/BZCLK07B.ITM~
     //Patches
-        SAY NAME2 @402
-        SAY IDENTIFIED_DESC @403
+        SAY NAME2 @20100
+        SAY IDENTIFIED_DESC @20101
         WRITE_LONG 0x34 14000                   // Price
-        WRITE_ASCII_TERMINATE 0x3A "BZCLK8BI"   // Icon
+        WRITE_ASCII_TERMINATE 0x3A "BZCL07BI"   // Icon
         WRITE_LONG 0x42 90                      // Lore to Identify
         LPF ~ALTER_ITEM_HEADER~
             INT_VAR
                 header = 1
                 charges = 2
             STR_VAR
-                icon = ~BZCL8B_C~       // icon to display for ranged
+                icon = ~BZCL7B_C~       // icon to display for ranged
         END
         LPF ~ALTER_ITEM_EFFECT~
             INT_VAR
@@ -103,7 +154,7 @@ COPY_EXISTING ~CLCK08.ITM~ ~override/BZCLK8B.ITM~
                 copy_header = 0
                 insert_point = ~-1~
             STR_VAR
-                icon = ~BZCL8B_F~
+                icon = ~BZCL7B_F~
         END
         LPF ~ADD_ITEM_EFFECT~           // Visuals
             INT_VAR

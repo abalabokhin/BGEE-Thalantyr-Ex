@@ -1,108 +1,13 @@
-//Mzce +2: Stupefier
-COPY ~%MOD_FOLDER%/comp/remainder/BZMA41BI.BAM~ ~override/BZMA41BI.BAM~
-
-COPY_EXISTING ~BLUN41.ITM~ ~override/BZMA41B.ITM~ //Mace +1 Stupefier -> +2
+/**************************
+*   Dagger +2: Werebane   *
+**************************/
+COPY ~%MOD_FOLDER%/craftable-items/items/daggers/BZDG09BI.BAM~ ~override/BZDG09BI.BAM~
+COPY_EXISTING ~DAGG05.ITM~ ~override/BZDAG09B.ITM~   //Werebane +1 -> +2
     //Patches
-        SAY NAME2 @600
-        SAY IDENTIFIED_DESC @601
-        WRITE_ASCII_TERMINATE 0x3A "BZMA41BI"   // Icon
-        WRITE_LONG 0x34 4500                    // Price
-        WRITE_LONG 0x42 60                      // Lore to Identify
-        WRITE_LONG 0x60 2                       // Enchantment
-        LPF ~ALTER_ITEM_HEADER~
-            INT_VAR
-                header = 1
-                thac0_bonus = 2
-                damage_bonus = 3
-            STR_VAR
-                icon = ~BZMA41BI~       // icon to display for melee
-        END
-        LPF ~ALTER_ITEM_EFFECT~
-            INT_VAR
-                //NOTE: Match all opcodes
-                check_headers = 1
-                probability1 = 15
-                savebonus = "-1"
-        END
-
-//Hammer of Dawn
-COPY ~%MOD_FOLDER%/comp/remainder/BZHM13BI.BAM~ ~override/BZHM13BI.BAM~
-COPY_EXISTING ~HAMM13.ITM~ ~override/BZHM13B.ITM~ //Hammer of Dawn +1 -> +2
-    //Patches
-        SAY NAME2 @602
-        SAY IDENTIFIED_DESC @603
-        WRITE_ASCII_TERMINATE 0x3A "BZHM13BI"   // Icon
-        WRITE_LONG 0x34 4500                    // Price
-        WRITE_LONG 0x42 60                      // Lore to Identify
-        WRITE_LONG 0x60 2                       // Enchantment
-        LPF ~ALTER_ITEM_HEADER~
-            INT_VAR
-                header = 1
-                thac0_bonus = 2
-                damage_bonus = 3
-            STR_VAR
-                icon = ~BZHM13BI~       // icon to display for melee
-        END
-        LPF ~ALTER_ITEM_EFFECT~
-            INT_VAR
-                check_headers = 1
-                match_opcode = 235      // Wing Buffet
-                probability1 = 15
-        END
-
-//Longsword Harrower
-COPY ~%MOD_FOLDER%/comp/remainder/BZSW79BI.BAM~ ~override/BZSW79BI.BAM~
-COPY_EXISTING ~SW1H79.ITM~ ~override/BZSW79B.ITM~   //Harrower +1 -> +2
-    //Patches
-        SAY NAME2 @604
-        SAY IDENTIFIED_DESC @605
-        WRITE_ASCII_TERMINATE 0x3A "BZSW79BI"   // Icon
-        WRITE_LONG 0x34 5000                    // Price
-        WRITE_LONG 0x42 60                      // Lore to Identify
-        WRITE_LONG 0x60 2                       // Enchantment
-        LPF ~ALTER_ITEM_HEADER~
-            INT_VAR
-                header = 1
-                thac0_bonus = 2
-                damage_bonus = 2
-            STR_VAR
-                icon = ~BZSW79BI~       // icon to display for melee
-        END
-        LPF ~ALTER_ITEM_EFFECT~
-            INT_VAR
-                check_headers = 1
-                match_opcode = 344      // Enchantment vs. Creature Type
-                special = 4             // enchantment
-        END
-
-
-//Crossbow of speed +1
-COPY ~%MOD_FOLDER%/comp/remainder/BZXB06BI.BAM~ ~override/BZXB06BI.BAM~
-COPY_EXISTING ~XBOW06.ITM~ ~override/BZXB06B.ITM~   //Crossbow of speed +1 -> +2
-    //Patches
-        SAY NAME2 @606
-        SAY IDENTIFIED_DESC @607
-        WRITE_LONG 0x34 16000                   // Price
-        WRITE_ASCII_TERMINATE 0x3A "BZXB06BI"   // Icon
-        WRITE_LONG 0x42 80                      // Lore to Identify
-        WRITE_LONG 0x60 2                       // Enchantment
-        LPF ~ALTER_ITEM_HEADER~
-            INT_VAR
-                header = 1
-                thac0_bonus = 2
-                damage_bonus = 2
-            STR_VAR
-                icon = ~BZXB06BI~       // icon to display for ranged
-        END
-
-//Dagger +2: Werebane
-COPY ~%MOD_FOLDER%/comp/remainder/BZDG09BI.BAM~ ~override/BZDG09BI.BAM~
-COPY_EXISTING ~DAGG05.ITM~ ~override/BZDG09B.ITM~   //Werebane +1 -> +2
-    //Patches
-        SAY NAME1 @608
-        SAY NAME2 @609
-        SAY UNIDENTIFIED_DESC @610
-        SAY IDENTIFIED_DESC @611
+        SAY NAME1 @110000
+        SAY NAME2 @110001
+        SAY UNIDENTIFIED_DESC @110002
+        SAY IDENTIFIED_DESC @110003
         WRITE_LONG 0x18 0b01101100              // flags: 2-3, 5-6 (6 is newly set)
         WRITE_LONG 0x34 6000                    // Price
         WRITE_LONG 0x38 1                       // Stack Size
