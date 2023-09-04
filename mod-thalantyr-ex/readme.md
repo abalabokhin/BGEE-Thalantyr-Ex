@@ -7,10 +7,10 @@ Bugs reports to [repository's GitHub Issues](https://github.com/BardezAnAvatar/B
 This mod is a collection of items that I want to expand or enhance using the Thalantyr Item Upgrade Mod.
 
 ## Remarks
-I am using the `BZ` prefix for my items, as I have not seen it used or referenced prior.
+I am using the `BZ` prefix for my items. It is registered at Black Wyrm Lair: http://www.blackwyrmlair.net/prefixes/
 
 
-## Status
+## Change Log
 | Item Name                          | Implemented? | Version |
 | ---------------------------------- | ------------ | ------- |
 | Shandalar's Cloak                  | ✔️ | 0.0.1  |
@@ -32,7 +32,8 @@ I am using the `BZ` prefix for my items, as I have not seen it used or reference
 | Werebane +2                        | ✔️ | 0.0.9  |
 | Algernon's Cloak +2                | ✔️ | 0.0.10 |
 | Extract recipes into variables     | ✔️ | 0.1.0  |
-| Re-organize items' TPH files       | ❌ | n/a |
+| Re-organize items' TPH files       | ✔️ | 0.2.0  |
+| Bugfix Ankheg Plate +1 AC bonuses  | ✔️ | 0.2.1  |
 | Verify BG2 readiness for TPH       | ❌ | n/a |
 | Refactor items into submodule      | ❌ | n/a |
 | Refactor recipes into submodle/TRA | ❌ | n/a |
