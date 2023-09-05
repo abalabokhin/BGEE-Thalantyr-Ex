@@ -1,43 +1,49 @@
 # Thalantyr Item Upgrade Mod Extensions
-Version: 0.2.0
+Version: 1.0.0
+
 Author: [Bardez](https://github.com/BardezAnAvatar)
+
 Bugs reports to [repository's GitHub Issues](https://github.com/BardezAnAvatar/BGEE-Thalantyr-Ex/issues)
+
+
 
 ## Introduction
 This mod is a collection of items that I want to expand or enhance using the Thalantyr Item Upgrade Mod.
+
+
 
 ## Remarks
 I am using the `BZ` prefix for my items. It is registered at Black Wyrm Lair: http://www.blackwyrmlair.net/prefixes/
 
 
+
 ## Change Log
-| Item Name                          | Implemented? | Version |
-| ---------------------------------- | ------------ | ------- |
-| Shandalar's Cloak                  | ✔️ | 0.0.1  |
-| Varscona +3                        | ✔️ | 0.0.2  |
-| Koveras' Ring                      | ✔️ | 0.0.3  |
-| Amulet of Protection +2            | ✔️ | 0.0.5  |
-| Cloak of Protection +2             | ✔️ | 0.0.5  |
-| Golden Axe +2                      | ✔️ | 0.0.6  |
-| Axe +1 Wizard Slayer               | ✔️ | 0.0.6  |
-| Axe +2 Wizard Slayer               | ✔️ | 0.0.6  |
-| Mace +2: The Stupifier             | ✔️ | 0.0.7  |
-| Hammer +2: The Hammer of Dawn      | ✔️ | 0.0.7  |
-| Long Sword +2: Harrower            | ✔️ | 0.0.7  |
-| Light Crossbow +2: The Army Scythe | ✔️ | 0.0.7  |
-| Ankheg Plate + 1                   | ✔️ | 0.0.8  |
-| Buckley's Buckler +2               | ✔️ | 0.0.8  |
-| Kiel's Helmet +1                   | ✔️ | 0.0.8  |
-| Kiel's Buckler +1                  | ✔️ | 0.0.8  |
-| Werebane +2                        | ✔️ | 0.0.9  |
-| Algernon's Cloak +2                | ✔️ | 0.0.10 |
-| Extract recipes into variables     | ✔️ | 0.1.0  |
-| Re-organize items' TPH files       | ✔️ | 0.2.0  |
-| Bugfix Ankheg Plate +1 AC bonuses  | ✔️ | 0.2.1  |
-| Add melee/ranged icons to dagger   | ✔️ | 0.2.2  |
-| Verify BG2 readiness for TPH       | ❌ | n/a |
-| Refactor items into submodule      | ❌ | n/a |
-| Refactor recipes into submodle/TRA | ❌ | n/a |
+| Item Name                          | Version |
+| ---------------------------------- | ------- |
+| Shandalar's Cloak                  |  0.0.1  |
+| Varscona +3                        |  0.0.2  |
+| Koveras' Ring                      |  0.0.3  |
+| Amulet of Protection +2            |  0.0.5  |
+| Cloak of Protection +2             |  0.0.5  |
+| Golden Axe +2                      |  0.0.6  |
+| Axe +1 Wizard Slayer               |  0.0.6  |
+| Axe +2 Wizard Slayer               |  0.0.6  |
+| Mace +2: The Stupifier             |  0.0.7  |
+| Hammer +2: The Hammer of Dawn      |  0.0.7  |
+| Long Sword +2: Harrower            |  0.0.7  |
+| Light Crossbow +2: The Army Scythe |  0.0.7  |
+| Ankheg Plate + 1                   |  0.0.8  |
+| Buckley's Buckler +2               |  0.0.8  |
+| Kiel's Helmet +1                   |  0.0.8  |
+| Kiel's Buckler +1                  |  0.0.8  |
+| Werebane +2                        |  0.0.9  |
+| Algernon's Cloak +2                |  0.0.10 |
+| Extract recipes into variables     |  0.1.0  |
+| Re-organize items' TPH files       |  0.2.0  |
+| Bugfix Ankheg Plate +1 AC bonuses  |  0.2.1  |
+| Add melee/ranged icons to dagger   |  0.2.2  |
+| Refactor items into submodule      |  1.0.0  |
+
 
 
 ## Items
@@ -246,42 +252,6 @@ The upgrate will require Werebane; 2 gold necklaces; 2 oils of speed; and 5,000 
 
 
 
-## Future Plans
-
-### Scroll of Death Ward
-This would make way more sense for the Koveras Ring of Protection, so add it in at a later date. Add to temple stores, etc.
-
-
-### Pickpocket Golden Axe and Hammer of Dawn
-Give a less murder-y way to receive these unique magical items.
-
-
-### SoD Parallel Mod Plans
-AX1H03 from +2-> +3 [SoD]
-AX1h06 +2-> +3 [SoD]
-BDBLUN05 +2-> +3 [SoD]
-BDBLUN08 (glimmer of hope) 2-> 3 [SoD]
-BDDAGG01 (elements' fury) [SoD] 2-> 3
-BDHALB01 (storm pike +2)  [SoD] 2-> 3
-BDHALB03 (cold fury +2) [SoD] 2-> 3
-BDSW1H22 (Severance +2) [SoD] 2-> 3
-BLUN11/42 (Skullcrusher +2) [SoD] 2-> 3
-BLUN39 (Thresher +2) [SoD] 2-> 3
-BDAX1h05 (Grubdoubler's Axe +1) 1-> 2 [SoD]
-BDBLUN02 (Cudgel of Montonger +1) 1-> 2 [SoD]
-BDSW1H08 (Dervish Crescent +2) 2-> 3 [SoD]
-BDSW1H20 (Ophyllis' Short Sword +2) 2-> 3 [SoD]
-BDSW1H21 (Vexaction +2) 2-> 3 [SoD]
-BDSW1H25 (Spell Breaker +2) 2-> 3 [SoD]
-BLUN41 (Stupifier +1) 2-> 3 [SoD]
-
-
-### SoA Parallel Mod Plans
-BLUN09 (Kiel's Morning Star +3) [Remove Curse, something] [SoA]
-SHLD19 (Pellan's Shield +2) 2-> 3 [SoA]
-
-
-
 ## Dedication
 This mod is dedicated to Elliana. I was mid-playthrough of BG:EE when she was born. I started this
 mod right after she was born, in the few wee hours when I had precious few moments not rocking her
@@ -293,6 +263,6 @@ of 10 PM and 2 AM, my solo watch as kiddo slept. I love you, pumpkin.
 ## Legal
 tl;dr: Creative Commons Attribution 4.0 International Public License
 
-See [the license file](https://github.com/BardezAnAvatar/BGEE-Thalantyr-Ex/LICENSE.md).
+See [the license file](https://github.com/BardezAnAvatar/BGEE-Thalantyr-Ex/blob/main/LICENSE.md).
 
 tl;dr: do what you will with it, credit me (Bardez) for starting the mod.
